@@ -161,7 +161,7 @@
     @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
     @keyframes wap{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.44)}50%{box-shadow:0 4px 36px rgba(37,211,102,.7)}}
     @keyframes pring{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:.8;transform:scale(1.04)}}
-    .rev{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}.rev.vis{opacity:1;transform:translateY(0)}
+    .rev{opacity:1;transform:translateY(0)}.rev.vis{opacity:1;transform:translateY(0)}
     @media(max-width:900px){.two-col,.how-grid,.why-grid,.ben-layout,.loc-grid{grid-template-columns:1fr;gap:26px}.tips-grid{grid-template-columns:1fr}}
     @media(max-width:768px){
       nav{padding:12px 18px}
@@ -377,9 +377,7 @@
 <a href="https://wa.me/27814502065" class="wa-float" target="_blank">💬</a>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   document.getElementById('yr').textContent=new Date().getFullYear();
-  const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('vis'),i*45);obs.unobserve(e.target);}});},{threshold:0,rootMargin:"0px 0px -10px 0px"});
-  document.querySelectorAll('.rev').forEach(r=>obs.observe(r));
-  setTimeout(()=>document.querySelectorAll('.rev').forEach(r=>r.classList.add('vis')),2500);
+  // reveal disabled - all content visible
   function submitForm(){
     const name=document.getElementById('sName').value.trim(),phone=document.getElementById('sPhone').value.trim();
     if(!name||!phone){alert('Please enter your name and contact number.');return;}
